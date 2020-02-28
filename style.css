@@ -1,0 +1,77 @@
+body {
+    background-color:linen;
+}
+
+.main-content {
+    border-right: dotted;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+#entries { 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#entries p {
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: whitesmoke;
+    margin: 2%;
+    padding: 2%;
+    word-break: break-all;
+}
+
+#add-button{
+    position: fixed;
+    background-color: green;
+    color: white;
+    bottom:2px;
+    left: 2px;
+    width: 10%;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+#popup{
+    display: none;
+    position: fixed;
+    bottom:2px;
+    left: 2px;   
+    max-width: 300px;   
+    background-color: rgb(214, 211, 211);
+    opacity: 0.8;
+    border: 3px solid #c9c7c7af;
+}
+
+.contact-form{
+    padding: 10px;
+}
+
+.contact-form label, .contact-form select{
+    display: block;
+}
+
+.contact-form textarea, .contact-form select {
+    border-radius: 4px;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+}
+
+.contact-form .btn {
+    background-color: green;
+    color: white;
+    margin-top: 5px;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.contact-form .cancel {
+    background-color: red;
+}

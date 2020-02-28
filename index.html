@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="script.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body onload="loadAll()">
+        <div class="wrapper">
+            <div class="main-content">
+                <h1>JavaScript exercise 2</h1>
+                <div class="instructions">
+                    <h3>Instructions</h3>
+                    <ul>
+                        <li>UI has an "ADD" button which creates a pop-up form to enter following information</li>
+                            <ol>
+                                <li>Question for The Guru (text field)</li>
+                                <li>Category (select menu with options "HTML", "CSS", "JS")</li>
+                                <li>SAVE and CANCEL buttons</li>
+                            </ol>
+                        <li>If user saves the entry it is stored in local storage including the date of the entry</li>
+                        <li>When there are entries available they are shown on screen in a scalable gridlayout with the latest ones on top and oldest on bottom</li>
+                        <li>Create a select menu to filter the shown entries by category</li>
+                    </ul>
+                    <p><a href="https://devaja.fi/docs/devaja_exercises.pdf">JavaScript exercise 2</a></p>
+                </div>    
+                <div class="select-menu">
+                    <h3>Filter by category</h3>
+                    <label>Filter by</label>
+                    <select id="selected-category" onchange="loadAll()">
+                        <option value="ALL">ALL</option>
+                        <option value="HTML">HTML</option>
+                        <option value="CSS">CSS</option>
+                        <option value="JS">JS</option>
+                    </select>
+                </div>           
+            </div>
+            <div id="entries"></div>
+        </div>
+        <button id="add-button" type="button" onclick="openForm()">ADD</button>
+        <div id="popup">  
+            <form class="contact-form">     
+                <h3>Contact</h3>         
+                <label >Question for The Guru</label>
+                <textarea rows="5" cols="30" placeholder="Your question" id="question"> </textarea>
+                <label >Category</label>
+                <select id="category">
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JS">JS</option>
+                </select>
+                <button type="button" class="btn save" onclick="addEntry()">SAVE</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">CANCEL</button>
+            </form>
+        </div>
+    </body>
+</html>
